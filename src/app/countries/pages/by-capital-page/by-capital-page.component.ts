@@ -1,11 +1,18 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'countries-by-capital-page',
   templateUrl: './by-capital-page.component.html',
-  styles: [
-  ]
+  styles: []
 })
 export class ByCapitalPageComponent {
+
+  constructor() {}
+
+  searchByCapital(term: Event): void {
+    console.log("From By Capital Page")
+    console.log({ term })
+  }
 
 }
