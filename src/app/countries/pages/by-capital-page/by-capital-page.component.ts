@@ -10,7 +10,7 @@ export class ByCapitalPageComponent {
 
   constructor() {}
 
-  searchByCapital(term: Event): void {
+  searchByCapital(term: string): void {
     console.log("From By Capital Page")
     console.log({ term })
   }
