@@ -18,9 +18,7 @@ export class CountryPageComponent implements OnInit {
     private router: Router
   ) {}
 
-
   public country?: Country
-
 
   ngOnInit(): void {
     this.activatedRoute.params.pipe(
