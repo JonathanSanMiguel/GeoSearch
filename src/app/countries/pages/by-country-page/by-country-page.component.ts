@@ -14,8 +14,12 @@ export class ByCountryPageComponent {
 
   @Input() public countries: Country[] = []
 
+
   searchByCountry(term: string): void {
-    this.countriesService.searchCountry(term).subscribe(
+
+    const resAndTerm: string = `name/${term}`
+
+    this.countriesService.toDoASearch(resAndTerm).subscribe(
       resCountries => {
         this.countries = resCountries
       }

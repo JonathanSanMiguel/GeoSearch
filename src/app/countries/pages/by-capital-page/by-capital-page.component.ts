@@ -16,7 +16,10 @@ export class ByCapitalPageComponent {
 
 
   searchByCapital(term: string): void {
-    this.countriesService.searchCapital(term).subscribe(
+
+    const resAndTerm: string = `capital/${term}`
+
+    this.countriesService.toDoASearch(resAndTerm).subscribe(
       resCountries => {
         this.countries = resCountries
       }
