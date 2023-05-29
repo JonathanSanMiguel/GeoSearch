@@ -3,21 +3,21 @@
 <hr>
 
 <!-- Search Box -->
-<div class="row">
-    <div class="col">
-        <shared-search-box
-            (onValue)="searchByRegion($event)"
-            placeholder="Ingrese una Region"
-        ></shared-search-box>
-    </div>
-</div>
+<section class="row">
+  <div class="col">
+    <shared-search-box
+      (onValue)="searchByRegion($event)"
+      placeholder="Ingrese una Region"
+    ></shared-search-box>
+  </div>
+</section>
 
 <hr>
 
 <!-- Result Table -->
-<div class="row">
-    <div class="col">
-        <hr>
-        <countries-country-table [tableCountries]="countries" ></countries-country-table>
-    </div>
-</div>
+<section class="row">
+  <div class="col">
+    <hr>
+    <countries-country-table [tableCountries]="countries" ></countries-country-table>
+  </div>
+</section>
