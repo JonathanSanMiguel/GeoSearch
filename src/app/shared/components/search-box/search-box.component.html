@@ -1,8 +1,9 @@
 <input
-    #txtSearchInput
-    class="form-control"
-    type="text"
-    [placeholder]="placeholder"
-    (keyup.enter)="emitirValor(txtSearchInput.value)"
-    autocomplete="off"
+  #txtSearchInput
+  (keyup)="onKeyPress(txtSearchInput.value)"
+  class="form-control"
+  type="text"
+  [placeholder]="placeholder"
+  autocomplete="off"
 >
+<!-- (keyup.enter)="emitirValor(txtSearchInput.value)" -->

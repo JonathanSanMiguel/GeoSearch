@@ -4,21 +4,22 @@
 <!-- Search Box -->
 <section class="row">
   <div class="col">
+    <!-- (onValue)="searchByCapital($event)" -->
     <shared-search-box
-      (onValue)="searchByCapital($event)"
+      (onDebounce)="searchByCapital($event)"
       placeholder="Ingrese una Capital"
     ></shared-search-box>
   </div>
 </section>
-
 <hr>
+
 
 <!-- Result Table -->
 <section class="row">
   <div class="col">
     <hr>
 
-    <shared-loading-spinner></shared-loading-spinner>
+    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
 
     <countries-country-table [tableCountries]="countries"></countries-country-table>
   </div>
