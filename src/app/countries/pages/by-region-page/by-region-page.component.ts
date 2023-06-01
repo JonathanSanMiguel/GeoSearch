@@ -14,16 +14,23 @@ export class ByRegionPageComponent {
 
   @Input() public countries: Country[] = []
 
+  public regions: Region[] = [ 'Africa', 'America', 'Asia', 'Europe', 'Oceania' ]
+  public isLoading: boolean = false
+
 
   searchByRegion(term: string): void {
+
+    this.isLoading = true
 
     const resAndTerm: string = `region/${term}`
 
     this.countriesService.toDoASearch(resAndTerm).subscribe(
       resCountries => {
+        this.isLoading = false
         this.countries = resCountries 
       }
     )
   }
-
 }
+
+type Region = 'Africa' | 'America' | 'Asia' | 'Europe' | 'Oceania' 
