@@ -5,9 +5,10 @@
 <main class="row">
   <section class="col text-center">
     <button
-      (click)="searchByRegion(region)"
-      class="btn btn-success m-3"
       type="button"
+      class="btn m-3"
+      [ngClass]="{'btn-outline-primary': selectedRegion === region}"
+      (click)="searchByRegion(region)"
       *ngFor="let region of regions">
       {{region}}
     </button>
