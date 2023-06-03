@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CountriesService } from '../../services/countries.service';
 import { Country } from '../../interfaces/country.interface';
+import { Region } from '../../interfaces/region.type';
 
 
 @Component({
@@ -27,7 +28,7 @@ export class ByRegionPageComponent {
 
     this.selectedRegion = term
 
-    this.countriesService.toDoASearch(resAndTerm).subscribe(
+    this.countriesService.byRegion(resAndTerm).subscribe(
       resCountries => {
         this.isLoading = false
         this.countries = resCountries 
@@ -35,5 +36,3 @@ export class ByRegionPageComponent {
     )
   }
 }
-
-type Region = 'Africa' | 'America' | 'Asia' | 'Europe' | 'Oceania' 

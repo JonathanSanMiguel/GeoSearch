@@ -23,7 +23,7 @@ export class ByCountryPageComponent {
 
     const resAndTerm: string = `name/${term}`
 
-    this.countriesService.toDoASearch(resAndTerm).subscribe(
+    this.countriesService.byCountry(resAndTerm).subscribe(
       resCountries => {
         this.isLoading = false
         this.countries = resCountries

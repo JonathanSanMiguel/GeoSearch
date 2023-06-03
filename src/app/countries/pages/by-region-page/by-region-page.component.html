@@ -3,24 +3,25 @@
 
 <!-- Search Box -->
 <main class="row">
-  <section class="col text-center">
-    <button
-      type="button"
-      class="btn m-3"
-      [ngClass]="{'btn-outline-primary': selectedRegion === region}"
-      (click)="searchByRegion(region)"
-      *ngFor="let region of regions">
-      {{region}}
-    </button>
-  </section>
+    <section class="col text-center">
+        <button
+            type="button"
+            class="btn m-3"
+            [ngClass]="{'btn-outline-primary': selectedRegion === region}"
+            (click)="searchByRegion(region)"
+            *ngFor="let region of regions"
+        >
+            {{region}}
+        </button>
+    </section>
 </main>
 <br>
 
 
 <!-- Result Table -->
 <main class="row">
-  <section class="col">
-    <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
-    <countries-country-table [tableCountries]="countries"></countries-country-table>
-  </section>
+    <section class="col">
+        <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+        <countries-country-table [tableCountries]="countries"></countries-country-table>
+    </section>
 </main>
