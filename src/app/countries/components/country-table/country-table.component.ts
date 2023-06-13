@@ -19,6 +19,8 @@ export class CountryTableComponent {
 
   @Input() public tableCountries: Country[] = []
 
+  
+
 
 
 }

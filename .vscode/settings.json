@@ -1,5 +1,7 @@
 {
   "editor.fontSize": 16,
   "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-"svg.preview.background": "dark-transparent"
+"svg.preview.background": "dark-transparent",
+"editor.detectIndentation": false,
+"editor.tabSize": 4
 }
